@@ -136,5 +136,7 @@ const newLength = friends.push('Jay');
  console.log(friends);
  console.log(newLength);
 
- friends.unshift('Jahn');
+ friends.unshift('John');
  console.log(friends);
+
+ // ==================== Objects ===================
