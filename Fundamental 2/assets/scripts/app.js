@@ -115,29 +115,30 @@
 
 // ===============  Exercise
 
-function calcAge(birthYear){
-    return 2037 - birthYear;
-}
-const years = [1990, 1967, 2002, 2010, 2018];
+// function calcAge(birthYear){
+//     return 2037 - birthYear;
+// }
+// const years = [1990, 1967, 2002, 2010, 2018];
 
-const age1 = calcAge(years[0]);
-const age2 = calcAge(years[1]);
-const age3 = calcAge(years[years.length - 1]);
-console.log(age1, age2, age3);
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
 
-const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2])];
-console.log(ages);
+// const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2])];
+// console.log(ages);
 
 // ==================== Basic array operation methods ===================
- const friends = ['Michael', 'Steven', 'Peter'];
+//  const friends = ['Michael', 'Steven', 'Peter'];
 //  friends.push('Jay');
 // Add elements
-const newLength = friends.push('Jay');
- console.log(friends);
- console.log(newLength);
+// const newLength = friends.push('Jay');
+//  console.log(friends);
+//  console.log(newLength);
 
- friends.unshift('John');
- console.log(friends);
+//  friends.unshift('John');
+//  console.log(friends);
 
  // ==================== Objects ===================
- // ==================== Objects ===================
+
+
