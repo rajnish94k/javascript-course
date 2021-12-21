@@ -129,38 +129,69 @@
 // console.log(ages);
 
 // ==================== Basic array operation methods ===================
- const friends = ['Michael', 'Steven', 'Peter'];
- friends.push('Jay');
+//  const friends = ['Michael', 'Steven', 'Peter'];
+//  friends.push('Jay');
 
 // ============== Add elements
-const newLength = friends.push('Jay');
- console.log(friends);
- console.log(newLength);
+// const newLength = friends.push('Jay');
+//  console.log(friends);
+//  console.log(newLength);
 
- friends.unshift('John');
- console.log(friends);
+//  friends.unshift('John');
+//  console.log(friends);
 
 // ============== Remove elements =====
-friends.pop(); // Last
-const poped = friends.pop();
-console.log(poped);
-console.log(friends);
+// friends.pop(); // Last
+// const poped = friends.pop();
+// console.log(poped);
+// console.log(friends);
 
-friends.shift(); // First
-console.log(friends);
+// friends.shift(); // First
+// console.log(friends);
 
-console.log(friends.indexOf('Steven'));
-console.log(friends.indexOf('Bob'));
+// console.log(friends.indexOf('Steven'));
+// console.log(friends.indexOf('Bob'));
 
-friends.push(23);
-console.log(friends.includes('Steven'));
-console.log(friends.includes('Bob'));
-console.log(friends.includes(23));
+// friends.push(23);
+// console.log(friends.includes('Steven'));
+// console.log(friends.includes('Bob'));
+// console.log(friends.includes(23));
 
-if (friends.includes('Steven')) {
-    console.log('You have a friend Steven');    
-}   
+// if (friends.includes('Steven')) {
+//     console.log('You have a friend Steven');    
+// }
+
 
 // ==================== Objects =================
 
+// const jonasArray = [
+//     'Jonas',
+//     'Schmedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven']
+// ];
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+}
+console.log(jonas);
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
 
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+// console.log(jonas.'last' + nameKey);
+
+const intrestedIn =  prompt();
+
+if (jonas[intrestedIn]) {
+    console.log(jonas[intrestedIn]);
+} else {
+    console.log('Wrong request! choose between firstName, lastName, age, job, friends');
+}
