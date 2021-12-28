@@ -171,33 +171,104 @@
 //     'teacher',
 //     ['Michael', 'Peter', 'Steven']
 // ];
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    age: 2037 - 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
-}
-console.log(jonas);
-console.log(jonas.lastName);
-console.log(jonas['lastName']);
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven']
+// }
+// console.log(jonas);
+// console.log(jonas.lastName);
+// console.log(jonas['lastName']);
 
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
-// console.log(jonas.'last' + nameKey);
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+// // console.log(jonas.'last' + nameKey);
 
-const intrestedIn =  prompt();
+// const intrestedIn =  prompt();
 
-if (jonas[intrestedIn]) {
-    console.log(jonas[intrestedIn]);    
-} else {
-    console.log('Wrong request! choose between firstName, lastName, age, job, friends');        
-}
-jonas.location = 'Portugal';
-jonas['twitter'] = '@jonasschmedtman';
-console.log(jonas);
+// if (jonas[intrestedIn]) {
+//     console.log(jonas[intrestedIn]);    
+// } else {
+//     console.log('Wrong request! choose between firstName, lastName, age, job, friends');
+// }
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonasschmedtman';
+// console.log(jonas);
 
 // challange
 //"jonas has 3 friends, and his bestr friend is called Muchael"
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is ${jonas.friends[0]}`);
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is ${jonas.friends[0]}`);  
+
+// Objets method
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYear: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriversLicense: true,
+
+//     // calcAge: function (birthYear) {
+//     //     return 2037 - birthYear;
+//     // }
+
+//     // calcAge: function () {
+//     //     console.log(this);
+//     //     // return 2037 - birthYear;
+//     //     return 2037 - this.birthYear;
+//     // }
+
+//     calcAge: function () {
+//         this.age = 2037 - this.birthYear;
+//         return this.age;
+//     },
+
+//     getSummary: function() {
+//         return `${this.firstName} is a ${this.calcAge()} -year old and he has ${this.hasDriversLicense ? 'a' : 'No'} driver license`;
+//     }
+// };
+// // jonas.calcAge(1991);
+// console.log(jonas.calcAge());
+
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+
+// // Challenge
+// // "Jonas is a 46-year old teacher and he has a driver license"
+
+// console.log(jonas.getSummary());
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 70,
+    height: 1.69,
+    calcBMI: function() {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+
+const john = {
+    fullName: 'John smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function() {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.bmi, john.bmi);
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName} 's BMI is ${mark.bmi} heigher than ${john.fullName}'s BMI ${mark.bmi}`);
+} else if (john.bmi > mark.bmi){
+    console.log(`${john.fullName} 's BMI is ${john.bmi} heigher than ${mark.fullName}'s BMI ${john.bmi}`);
+}
+
